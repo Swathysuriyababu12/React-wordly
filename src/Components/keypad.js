@@ -5,10 +5,11 @@ export default function Keypad({ usedKeys }) {
   console.log(usedKeys);
 
   useEffect(() => {
-    fetch("http://localhost:3001/letters")
+    fetch("https://62bb04cf7bdbe01d529589cd.mockapi.io/users")
       .then((res) => res.json())
       .then((json) => {
-        setLetters(json);
+        console.log(json[0].letters);
+        setLetters(json[0].letters);
       });
   }, []);
 

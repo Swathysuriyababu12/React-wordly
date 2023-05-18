@@ -24,6 +24,9 @@
       "react-app/jest"
     ]
   },
+  "overrides": {
+    "webpack": "5.82.1"
+  },
   "browserslist": {
     "production": [
       ">0.2%",

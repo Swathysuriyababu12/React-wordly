@@ -5,7 +5,7 @@ import WelcomeScreen from "./Components/Welcome";
 import { useEffect, useState } from "react";
 import Wordle from "./Components/Wordle";
 import "./App.css";
-import useWordle from "./Components/useWordle";
+
 import Win from "./Components/Win";
 import Lose from "./Components/Lose";
 import Leaderboard from "./Components/Leaderboard";
@@ -15,11 +15,12 @@ function App() {
   console.log(solution);
 
   useEffect(() => {
-    fetch("http://localhost:3001/solutions")
+    fetch("https://62bb04cf7bdbe01d529589cd.mockapi.io/users")
       .then((res) => res.json())
       .then((json) => {
         // random int between 0 & 14
-        const randomSolution = json[Math.floor(Math.random() * json.length)];
+        const randomSolution =
+          json[0].solutions[Math.floor(Math.random() * json.length)];
         setSolution(randomSolution.word);
       });
   }, [setSolution]);
