@@ -20,7 +20,7 @@ function App() {
       .then((json) => {
         // random int between 0 & 14
         const randomSolution =
-          json[0].solutions[Math.floor(Math.random() * json.length)];
+          json[0].solutions[Math.floor(Math.random() * 10)];
         setSolution(randomSolution.word);
       });
   }, [setSolution]);
