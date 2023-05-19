@@ -9,9 +9,13 @@ function Lose() {
     navigate("/game");
   };
   return (
-    <button className="play-again-button" onClick={onPlayAgain}>
-      Play Again
-    </button>
+    <>
+      <h1 className="welcome-title">You lost the game:(</h1>
+      <p className="welcome-text">Its okay,Click below to play again</p>
+      <button className="play-again-button" onClick={onPlayAgain}>
+        Play Again
+      </button>
+    </>
   );
 }
 

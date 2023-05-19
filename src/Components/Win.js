@@ -9,9 +9,13 @@ function Win() {
     navigate("/leaderboard");
   };
   return (
-    <button className="play-again-button" onClick={onPlayAgain}>
-      Go to leader board
-    </button>
+    <>
+      <h1 className="welcome-title">Congratulations!!</h1>
+      <p className="welcome-text">You won the game</p>
+      <button className="play-again-button" onClick={onPlayAgain}>
+        Go to leader board
+      </button>
+    </>
   );
 }
 
